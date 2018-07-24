@@ -1,15 +1,17 @@
 console.log('App.js is running...');
 
-var app = {
+const app = {
     title:'Indecision app',
-    subtitle:'React project'
+    subtitle:'React project',
+    options: ['one', 'two']
 };
 
 //JSX - JavaScript XML
-var template = (
+const template = (
     <div>
         <h1>{app.title}</h1>
-        <p>{app.subtitle}</p>
+        {app.subtitle && <p>{app.subtitle}</p>}
+        <p>{app.options.length > 0 ? 'Here are your options:' + app.options : 'No options'}</p>
         <ol>
             <li>Item one</li>
             <li>Item two</li>
@@ -17,19 +19,25 @@ var template = (
     </div>
 );
 
-var user = {
+const user = {
     name:'Walter Geoffrey',
-    age: 2,
-    location: 'USA'
+    age: 20
 };
-var templateTwo = (
+
+function getLocation(location){
+    if(location){
+        return <p>Location: {location}</p>;
+    }
+}
+
+const templateTwo = (
     <div>
-        <h1>{user.name}</h1>
-        <p>Age: {user.age}</p>
-        <p>Location: {user.location}</p>
+        <h1>{user.name ? user.name : 'Anonymous'}</h1>
+        {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
+        {getLocation(user.location)}
     </div>
 );
 
-var root = document.getElementById('app');
+const root = document.getElementById('app');
 
 ReactDOM.render(template,root);
