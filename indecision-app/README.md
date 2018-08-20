@@ -16,7 +16,7 @@
 ### Development
 
 1. To make babel compile in real-time the app: 
-   1. Go to the indecision-app folder in terminal and run: ` babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch`
+   1. Go to the indecision-app folder in terminal and run: `babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch`
 2. To execute live-server to see the changes in real time: 
    1. Go to the indecion-app folder in terminal and run: `live-server public`
 
