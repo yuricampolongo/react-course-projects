@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default class AddOption extends React.Component {
   constructor(props) {
@@ -8,18 +8,17 @@ export default class AddOption extends React.Component {
       error: undefined
     };
   }
-
   handleAddOption(e) {
     e.preventDefault();
     const option = e.target.elements.option.value.trim();
     const error = this.props.handleAddOption(option);
+
     this.setState(() => ({ error }));
 
     if (!error) {
-      e.target.elements.option.value = "";
+      e.target.elements.option.value = '';
     }
   }
-
   render() {
     return (
       <div>
