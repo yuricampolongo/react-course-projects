@@ -15,6 +15,6 @@
 ### Development
 
 1. To execute live-server to see the changes in real time:
-   1. Go to the indecion-app folder in terminal and run: `yarn run serve`
+   1. Go to the indecion-app folder in terminal and run: `yarn run dev-server`
 2. To execute webpack to bundle all the scripts:
    1. Go to the indecion-app folder in terminal and run: `yarn run build`
